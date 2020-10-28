@@ -1,25 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
-import { Typography } from '@material-ui/core';
-import { ThemeProvider, useTheme, makeStyles } from '@material-ui/core/styles'
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { Button, Typography, Container} from '@material-ui/core';
+import { ThemeProvider, useTheme, makeStyles, createMuiTheme } from '@material-ui/core/styles'
+import { red, green } from '@material-ui/core/colors'
 
 const styles = makeStyles({
   root: {
-    backgroundColor: 'red',
+    backgroundColor: 'beige',
   },
 });
 
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: green[500]
+    },
+    secondary:{
+      main: '#e3f2fd'
+    }
+  }
+})
+
 function App() {
   const classes = styles(); //className={classes.root}
-  const theme = useTheme();
-
-  
+  //const theme = useTheme();
 
   return (
     <ThemeProvider theme={theme}>
-      <container>
+      <CssBaseline />
+      <Container fluid className='App-header'>
+        <Button 
+          variant="contained"
+          color="secondary"
+          >
+          Click me
+        </Button>
 
-      </container>
+      </Container>
     </ThemeProvider>
     
   );
