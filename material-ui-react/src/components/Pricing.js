@@ -49,6 +49,11 @@ const useStyles = makeStyles((theme) => ({
     link:{
         margin: theme.spacing(1, 1.5),
     },
+    card:{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
     heroContent:{
         padding: theme.spacing(8, 0, 6),
     },
@@ -91,7 +96,28 @@ function Pricing() {
                     </Button>
                 </Toolbar>
             </AppBar>
-            <h1>i am the heading </h1>
+            <Container maxWidth='sm' component='main' className={classes.herContent}>
+                <Typography component='h1' variant='h2' align='center' color='textPrimary' gutterBottom>
+                    Pricing
+                </Typography>
+                <Typography variant='h5' align='center' color='textSecondary' component='p'>
+                    Quickly build an effective pricing table for your potential customers with this layout.
+                    It&apos;s built with default Material-UI components with little customization.
+                </Typography>
+            </Container>
+            {/* <card className={classes.card}>
+                <cardHeader>
+                    <Typography variant='h3' color='textPrimary'>Pricing</Typography>
+                </cardHeader>
+                <cardContent>
+                    <Typography component='p' color='textPrimary'>
+                        Quickly build an effective pricing table for your potential<br/>
+                        customers with this layout. It's built with default Material-UI<br/>
+                        components with little customization.
+                    </Typography>
+                </cardContent>
+                
+            </card> */}
         </>
     )
 }
