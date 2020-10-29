@@ -5,6 +5,7 @@ import { Container} from '@material-ui/core';
 // import { ThemeProvider, useTheme, makeStyles, createMuiTheme } from '@material-ui/core/styles'
 // import { red, green } from '@material-ui/core/colors'
 import SignIn from './components/SignIn';
+import Routing from './Routing';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 
   return (  
     <>
+      <Routing />
       <CssBaseline />
       <Container maxWidth="lg" className='App-header'>
         <SignIn />
