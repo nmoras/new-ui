@@ -1,15 +1,16 @@
 import React from 'react'
-import { Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Pricing from './components/Pricing';
 import SignIn from './components/SignIn';
-
-
 
 function Routing() {
     return (
         <>
-            <Route exact path='/signin' component={SignIn} />
-            <Route exact path='/pricing' component={Pricing} />
+            <Router>
+                <Route exact path='/' component={SignIn} />
+                <Route exact path='/pricing' component={Pricing} />
+            </Router>
+            
         </>
     )
 }
