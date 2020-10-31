@@ -5,22 +5,19 @@ import { Container} from '@material-ui/core';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import { ThemeProvider, useTheme, makeStyles, createMuiTheme } from '@material-ui/core/styles'
 // import { red, green } from '@material-ui/core/colors'
-import SignIn from './components/SignIn';
-import Navbar from './components/Navbar';
-import Pricing from './components/Pricing';
+import SignIn from './components/materialui/SignIn';
+import Navbar from './components/materialui/Navbar';
+import Pricing from './components/materialui/Pricing';
 import Routing from './Routing';
 
 function App() {
   return (  
     <> 
-      
       <CssBaseline />
-      <Navbar />  
+      {/* <Navbar />  
       <Container maxWidth="lg" className='App-header'> 
         <Routing />
-      </Container>
-     
-
+      </Container> */}
     </>
   );
 }
